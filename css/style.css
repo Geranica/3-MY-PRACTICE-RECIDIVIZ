@@ -614,10 +614,34 @@ body {
    padding-top: 87px;
    padding-bottom: 132px;
 }
+@media (max-width: 934px) {
+   .press__container {
+      padding-top: 60px;
+      padding-bottom: 100px;
+   }
+}
+@media(max-width: 550px) {
+   .press__container {
+      padding-bottom: 70px;
+   }
+}
 .press__title-button {
    display: flex;
    justify-content: space-between;
    align-items: center;
+   flex-wrap: wrap;
+}
+@media(max-width: 550px) {
+   .press__title-button {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 26px 0px;
+   }
+}
+@media(max-width: 375px) {
+   .press__title-button {
+      align-items: center;
+   }
 }
 .press__title {
    color: #003331;
@@ -626,6 +650,11 @@ body {
    font-weight: 400;
    line-height: 1.40741;
    letter-spacing: 1.2px;
+}
+@media(max-width: 375px) {
+   .press__title {
+      font-size: 24px;
+   }
 }
 .press__button {
    display: flex;
@@ -641,8 +670,17 @@ body {
    letter-spacing: 0.02px;
    color: #00413E;
    border: 1px solid #D0D7DA;
-   max-width: 112px;
-
+   width: 112px;
+}
+@media(max-width: 550px) {
+   .press__button {
+      width: 150px;
+   }
+}
+@media(max-width: 375px) {
+   .press__button {
+      width: 180px;
+   }
 }
 .press__body {
    display: flex;
@@ -651,21 +689,31 @@ body {
    row-gap: 52px;
    column-gap: 31px;
 }
+@media(max-width: 550px) {
+   .press__body {
+      row-gap: 35px;
+   }
+}
+@media(max-width: 375px) {
+   .press__body {
+      margin: 50px 0px 0px 0px;
+   }
+}
 .press__item {
    flex: 0 1 calc(100% / 3 - (((3 - 1) / 3) * 31px)); /* данная формула позволяет корректно использовать gap и выстраивать точную колоночную систему*/
    padding: 16px 0px 0px 0px;
    border-top: 1px solid #C2CBD0;
 }
-@media(max-width: 881px) {
+@media(max-width: 992px) {
    .press__item{
       flex: 0 1 calc(100% / 2 - (((2 - 1) / 2) * 31px));
    } 
 }
-
-/* .press__item:not(:nth-child(3n)) {
-   margin: 0px 31px 0px 0px;
-} */
-
+@media(max-width: 550px) {
+   .press__item{
+      flex: 0 1 100%;
+   } 
+}
 .press__head {
    display: flex;
    align-items: center;
